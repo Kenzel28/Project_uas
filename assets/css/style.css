@@ -1,0 +1,173 @@
+body {
+    font-family: 'Sofadi One', sans-serif;
+    font-weight: 400;
+}
+
+h1, h2, h3, h5 {
+    color: #333;
+    font-family: 'Sofadi One', sans-serif;
+    font-weight: 700;
+}
+
+p {
+    font-family: 'Sofadi One', sans-serif;
+}
+
+.navbar .logo {
+    width: 60px;
+    height: 60px;
+    margin-right: 20px;
+}
+
+footer {
+    width: 100%;
+    margin: 0;
+    padding: 10px 0;
+    text-align: center;
+    background-color: #343a40;
+}
+
+.container {
+    max-width: 1200px;
+}
+
+.card-img-top{
+    width: 400px;
+    height: 200px;
+}
+
+.carousel .custom-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    width: 50px;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel .carousel-control-prev.custom-nav {
+    left: -30px;
+}
+
+.carousel .carousel-control-next.custom-nav {
+    right: -30px;
+}
+
+.carousel .carousel-control-prev-icon,
+.carousel .carousel-control-next-icon {
+    filter: none;
+    width: 24px;
+    height: 24px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+.tips-item {
+    margin-bottom: 15px;
+}
+
+.tips-header {
+    padding: 15px;
+    background-color: gainsboro;
+    color: black;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.tips-header:hover {
+    background-color: beige;
+}
+
+.tips-content {
+    display: none;
+    padding: 20px;
+    background-color: #f1f1f1;
+    border-left: 3px solid beige;
+    border-radius: 0 0 4px 4px;
+    margin-top: 5px;
+    animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.btn {
+    position: relative;
+}
+
+#searchGrid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+
+#searchGrid .card {
+    flex: 1 1 calc(25% - 15px);
+    max-width: calc(25% - 15px);
+}
+
+#searchResults {
+    display: none;
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+#searchGrid .card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ddd;
+}
+
+
+#searchGrid .card {
+    flex: 1 0 calc(25% - 20px);
+    max-width: calc(25% - 20px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ddd;
+}
+
+#searchResultsContainer .card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+#searchResultsContainer .card:hover {
+    transform: scale(1.05);
+}
+
+#searchResultsSection {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+    #searchGrid .card {
+        flex: 1 1 calc(50% - 15px); 
+        max-width: calc(50% - 15px);
+    }
+}
+
+@media (max-width: 576px) {
+    #searchGrid .card {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+}
